@@ -1,5 +1,5 @@
 
-export const DOMAIN = "https://dirmatech.com";
+export const DOMAIN = "https://aktieprognose.in.net";
 // export const DOMAIN = "http://localhost:3000";
 
 export const APP_DESCRIPTION = 'DirmaTech';
