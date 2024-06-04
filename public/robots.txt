@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /admin
+Disallow: /aktieprognose-admin
 Disallow: /admin/*
 Disallow: /public/images/*
 Disallow: /config
-Sitemap: https://trainspeedtest.in.net/sitemap.xml
+Sitemap: https://aktieprognose.in.net/sitemap.xml
