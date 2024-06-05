@@ -61,8 +61,8 @@ const SingleBlogPost = ({ blog, errorCode }) => {
         "image": `${blog?.photo}`,
         "author": {
             "@type": "Person",
-            "name": `${blog?.postedBy.name}`,
-            "url": `${DOMAIN}/profile/${blog?.postedBy.username}`
+            "name": `${blog?.postedBy?.name}`,
+            "url": `${DOMAIN}/profile/${blog?.postedBy?.username}`
         },
         "publisher": {
             "@type": "Person",
@@ -171,25 +171,19 @@ const SingleBlogPost = ({ blog, errorCode }) => {
 
 
                 <section className='dark:bg-[#10141c] dark:text-[whitesmoke]'>
-                    <br /><br /><br />
 
-                    <div className='border-2 border-dashed border-[grey] md:w-[800px] md:mx-auto mx-5 sm:p-8 p-4 rounded'>
+                    {/* <div className='border-2 border-dashed border-[grey] md:w-[800px] md:mx-auto mx-5 sm:p-8 p-4 rounded'>
                         <div className='flex justify-center'> <img src="/images/author.png" alt="" className='h-[100px] w-[90px]' /></div>
                         <p className='text-center font-bold text-xl mt-5' style={{ wordSpacing: "1.7px" }}>Divyanshu Rawat</p>
-
                         <div className='flex justify-center gap-5 mt-5'>
                             <div><a target='_blank' className='text-[#0a66c2]' href="https://www.linkedin.com/in/divyanshu-rawat-380911210/"><ImLinkedin size={30} /></a></div>
                             <div><a target='_blank' className='text-[#e77a47]' href="https://www.instagram.com/divrawat2001"><FaInstagramSquare size={30} /></a></div>
                             <div><a target='_blank' className='text-[#1f2328]' href="https://github.com/divrawat"><FaGithub size={30} /></a></div>
                         </div>
-
-
                         <p className='text-center  mt-5 leading-8' style={{ wordSpacing: "1.7px" }}>Hi there! I am a tech enthusiast, Full Stack Developer and writer. I love sharing insights on technology and web development through my articles. When I'm not coding, you can find me outdoors or lost in a good book.</p>
+                    </div> */}
 
-
-                    </div>
-
-                    <div className='md:text-4xl text-3xl font-bold text-center md:pt-[180px] pt-10' style={{ wordSpacing: "1.7px" }}>Related Posts</div>
+                    <div className='md:text-4xl text-3xl font-bold text-center md:pt-[30px] pt-10' style={{ wordSpacing: "1.7px" }}>Related Posts</div>
                     <section className=' max-w-[1230px] flex sm:gap-[70px] gap-5 md:mt-10 mt-3 pb-5 justify-center mx-auto flex-wrap'>{showRelatedBlog()}</section>
                 </section >
 
@@ -204,12 +198,13 @@ const SingleBlogPost = ({ blog, errorCode }) => {
 
 
 
-
+/*
 export async function getStaticPaths() {
     const slugs = ["exploring-norway-a-journey-of-discovery", "europe's-most-popular-train-stations"];
     const paths = slugs.map(slug => ({ params: { slug } }));
     return { paths, fallback: 'blocking' };
 }
+*/
 
 
 
@@ -220,6 +215,7 @@ export async function getStaticPaths() {
     return { paths, fallback: "blocking" };
 }
 */
+
 export async function getStaticProps({ params }) {
     try {
         const data = await singleBlog(params.slug);

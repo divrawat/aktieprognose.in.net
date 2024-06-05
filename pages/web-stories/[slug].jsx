@@ -260,6 +260,8 @@ const Stories = ({ story, errorCode }) => {
     </>
   );
 };
+
+
 /*
 export async function getStaticPaths() {
   const slugs = await webstoryslugs();
@@ -267,11 +269,14 @@ export async function getStaticPaths() {
 }
 */
 
+/*
 export async function getStaticPaths() {
   const slugs = ["btc-slips-as-economic-indicators-shake"];
   const paths = slugs.map(slug => ({ params: { slug } }));
   return { paths, fallback: 'blocking' };
 }
+*/
+
 
 export async function getStaticProps({ params, res }) {
   try {

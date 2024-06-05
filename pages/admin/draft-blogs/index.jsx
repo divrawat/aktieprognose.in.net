@@ -148,18 +148,18 @@ const AllBlogs = () => {
 
                             <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    <div>{blog.title}</div>
+                                    <div>{blog?.title}</div>
                                 </th>
                                 <td className="px-6 py-4">
-                                    {formatCreatedAt(blog.date)}
+                                    {formatCreatedAt(blog?.date)}
                                 </td>
                                 <td className="px-6 py-4">
-                                    {blog.postedBy.name}
+                                    {blog?.postedBy?.name}
                                 </td>
 
 
                                 <td className="flex items-center gap-10 px-6 py-4">
-                                    <div className="cursor-pointer text-black"> <a target="_blank" href={`/admin/draft/${blog.slug}`}> <FaEdit size={20} /></a></div>
+                                    <div className="cursor-pointer text-black"> <a target="_blank" href={`/admin/draft/${blog?.slug}`}> <FaEdit size={20} /></a></div>
                                     <div className="cursor-pointer text-[red]" onClick={() => showModal(blog)}>  <MdDelete size={20} /></div>
                                 </td>
                             </tr>
@@ -175,12 +175,12 @@ const AllBlogs = () => {
                 <div className="fixed top-0 right-0 bottom-0 left-0 bg-black opacity-60"></div>
                 <div className="bg-white p-8 rounded-lg shadow-lg z-10">
                     <h2 className="text-lg font-semibold mb-4">Confirm Deletion</h2>
-                    <p className="mb-4">Are you sure you want to delete &nbsp;<span className="font-bold text-xl">{currentuserID.title}</span></p>
+                    <p className="mb-4">Are you sure you want to delete &nbsp;<span className="font-bold text-xl">{currentuserID?.title}</span></p>
                     <div className="text-sm text-[#d35e5e]">Type the name of the Article</div>
                     <input autoComplete="off" value={inputValue} onChange={handleInputChange} required name="name" type="text" placeholder="Name" className="border border-red-500 w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none rounded-md" />
 
                     <div className="flex justify-end mt-8">
-                        <button disabled={inputValue !== currentuserID.title} onClick={() => handleConfirmDelete(currentuserID.slug)} className={`text-sm bg-red-600 mr-2 hover:bg-red-700 hover:scale-105 active:scale-95 transition-transform text-white font-semibold py-2 px-4 rounded ${inputValue !== currentuserID.title ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                        <button disabled={inputValue !== currentuserID.title} onClick={() => handleConfirmDelete(currentuserID?.slug)} className={`text-sm bg-red-600 mr-2 hover:bg-red-700 hover:scale-105 active:scale-95 transition-transform text-white font-semibold py-2 px-4 rounded ${inputValue !== currentuserID?.title ? 'opacity-50 cursor-not-allowed' : ''}`}>
                             Delete
                         </button>
                         <button className="bg-slate-800 text-sm hover:bg-slate-900 hover:scale-105 active:scale-95 transition-transform text-white font-semibold py-2 px-4 rounded mr-2"

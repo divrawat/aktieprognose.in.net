@@ -13,7 +13,7 @@ const handler = async (req, res) => {
         const { search } = req.query;
         const query = { $and: [{ title: { $regex: search, $options: 'i' } }, { status: { $ne: 'Publish' } }] };
         const skip = (page - 1) * perPage;
-        const data = await Draft.find(query).populate({ path: 'postedBy', model: User, select: 'name username -_id' })
+        const data = await Draft.find(query).populate({ path: 'postedBy', model: User, select: 'name username' })
             .sort({ date: -1 }).skip(skip).limit(perPage).exec();
         res.json({
             status: true,

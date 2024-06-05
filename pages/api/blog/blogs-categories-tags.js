@@ -8,8 +8,8 @@ const handler = async (req, res) => {
     await connectMongo();
     try {
         const blogs = await Blog.find({}).sort({ date: -1 })
-            .populate({ path: 'categories', model: Category, select: 'name slug -_id' })
-            .populate({ path: 'postedBy', model: User, select: 'name username -_id' })
+            .populate({ path: 'categories', model: Category, select: 'name slug' })
+            .populate({ path: 'postedBy', model: User, select: 'name username' })
             .select('-_id title photo slug excerpt categories date postedBy').exec();
         res.json({ blogs, size: blogs.length });
     } catch (err) { res.json({ error: "Something Went Wrong" }); }

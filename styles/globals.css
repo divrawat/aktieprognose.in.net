@@ -160,7 +160,7 @@ body{
 .postcontent img {
   display: block !important;
   margin: auto !important;
-  margin-bottom: 50px !important;
+  /* margin-bottom: 10px !important; */
 }
 
 
