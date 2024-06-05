@@ -198,13 +198,13 @@ const SingleBlogPost = ({ blog, errorCode }) => {
 
 
 
-/*
+
 export async function getStaticPaths() {
-    const slugs = ["exploring-norway-a-journey-of-discovery", "europe's-most-popular-train-stations"];
+    const slugs = ["exploring-norway-a-journey-of-discovery"];
     const paths = slugs.map(slug => ({ params: { slug } }));
     return { paths, fallback: 'blocking' };
 }
-*/
+
 
 
 

@@ -269,13 +269,13 @@ export async function getStaticPaths() {
 }
 */
 
-/*
+
 export async function getStaticPaths() {
-  const slugs = ["btc-slips-as-economic-indicators-shake"];
+  const slugs = ["btc-slips-as-economic-000-indicators-shake"];
   const paths = slugs.map(slug => ({ params: { slug } }));
   return { paths, fallback: 'blocking' };
 }
-*/
+
 
 
 export async function getStaticProps({ params, res }) {
