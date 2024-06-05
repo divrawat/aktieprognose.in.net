@@ -21,3 +21,6 @@ export const FooterLinks = [
   { text: 'Disclaimer', href: '/disclaimer' },
   { text: 'Privacy Policy', href: '/privacy-policy' }
 ];
+
+
+

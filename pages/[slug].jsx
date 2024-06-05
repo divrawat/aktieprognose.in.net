@@ -35,7 +35,7 @@ const SingleBlogPost = ({ blog, errorCode }) => {
 
     const showRelatedBlog = () => {
         return (blog?.relatedPosts && blog?.relatedPosts.map((blog, i) => (
-            <article key={i} className=" sm:w-[300px] max-w-[350px] mx-auto my-8 md:mx-6 rounded  border dark:bg-black bg-white border-gray-300 hover:scale-105 transition-transform"><SmallCard blog={blog} /></article>
+            <article key={i} className=" sm:w-[300px] max-w-[350px] mx-auto my-8 md:mx-6 rounded bg-white border border-gray-300 hover:scale-105 transition-transform"><SmallCard blog={blog} /></article>
         )))
     };
 

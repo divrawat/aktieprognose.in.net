@@ -5,14 +5,14 @@ const Card = ({ blog }) => {
 
     const showBlogCategories = blog =>
         blog.categories.map((c, i) => (
-            <div key={i} className='bg-black text-[#89f379] border border-[grey] m-3 hover:scale-105 transition-transform font-bold rounded py-2 px-3'> <Link href={`/categories/${c.slug}`}>{c.name}</Link></div>
+            <div key={i} className='bg-white text-black border border-[grey] m-3 hover:scale-105 transition-transform font-bold rounded py-2 px-3'> <Link href={`/categories/${c.slug}`}>{c.name}</Link></div>
         ))
 
     const formattedDate = blog.formattedDate;
 
     return (
 
-        <div className="sm:w-[350px] w-[300px]  my-8 mx-6  sm:mx-auto rounded pb-8 bg-[black] text-white  hover:scale-105 transition-transform">
+        <div className="sm:w-[350px] w-[300px] border border-gray-300 my-8 mx-6  sm:mx-auto rounded pb-8 text-black  hover:scale-105 transition-transform">
             <Link href={`/${blog.slug}`}></Link>
             <Link href={`/${blog.slug}`}><img src={blog.photo} alt={blog.title} className='h-[200px] w-[350px] object-cover' /></Link>
             <header><h2 className='text-center text-2xl py-5 font-bold px-2'><Link className='hover:underline' href={`/${blog.slug}`}>{blog.title}</Link></h2></header>
