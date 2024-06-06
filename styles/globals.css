@@ -10,7 +10,8 @@
 
 body{
   /* font-family: "Poppins", sans-serif; */
-  font-family: "Shantell Sans", cursive;
+  /* font-family: "Shantell Sans", cursive; */
+  color: #131010;
 }
 
 
@@ -32,13 +33,13 @@ body{
 }
 
 .postcontent ul, .se-wrapper ol{
-  margin-bottom: 40px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-top: -20px;
   list-style: disc;
 }
 .postcontent ol, .se-wrapper ol{
-  margin-bottom: 40px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-top: -20px;
   list-style: decimal;
 }
 
@@ -79,7 +80,7 @@ body{
   margin-left: 30px;
   word-spacing: 1.5px;
   line-height: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 @media screen and (max-width:480px){

@@ -9,7 +9,7 @@ import { APP_NAME, APP_DESCRIPTION, DOMAIN } from "@/config";
 const Home = ({ blogs }) => {
   const showAllBlogs = () => {
     return blogs && blogs.map((blog, i) => (
-      <article key={i}><Card blog={blog} /></article>
+      <article className=" w-[340px] mx-auto my-8 md:mx-6 rounded bg-white border border-gray-300 hover:scale-105 transition-transform" key={i}><Card blog={blog} /></article>
     )).slice(0, 9);
   }
 
@@ -37,9 +37,7 @@ const Home = ({ blogs }) => {
       <Navbar />
 
       <div className=" dark:bg-[#10141c] dark:text-[#cecdcd]">
-        <section>
-          <div className="max-w-[1220px] flex sm:gap-[70px] gap-5 md:pt-10 pt-3 pb-5 px-3 justify-center mx-auto flex-wrap">{showAllBlogs()}</div>
-        </section>
+        <div className=" max-w-[1250px] flex px-3 gap-5 md:mt-10 mt-3 pb-5 justify-center mx-auto flex-wrap">{showAllBlogs()}</div>
       </div>
 
       <Footer />

@@ -138,7 +138,7 @@ const SingleBlogPost = ({ blog, errorCode }) => {
 
                                     <br />
                                     <section >
-                                        <div className='mt-3'>
+                                        <div className='mt-3 flex justify-center'>
                                             <img src={blog?.photo} alt={blog?.title} className='md:object-cover' />
                                         </div>
                                     </section>
